@@ -1,7 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const [movies, setMovies] = React.useState([]);
+
+  React.useEffect(() => {
+    (async () => {
+      const response = await (
+        await fetch("https://api.sampleapis.com/movies/horror")
+      ).json();
+      setMovies(response);
+    })();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
