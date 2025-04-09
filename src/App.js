@@ -4,7 +4,7 @@ import Users from "./pages/Users";
 import Movies from "./pages/Movies";
 import Books from "./pages/Books";
 import UsersPosts from "./pages/UsersPosts";
-import UserBooks from "./pages/UserBooks";
+import SingleBook from "./pages/SingleBook";
 
 /**
  * React Router DOM (RRD) => Is a library that handles routing in react applications.
@@ -45,10 +45,9 @@ function App() {
         <Route path="users" element={<Users />}>
           {/* The UsersPosts page is at /users/posts */}
           <Route path="posts/:userId" element={<UsersPosts />} />
-          {/* The UserBooks page is at /users/books */}
-          <Route path="books/:id" element={<UserBooks />} />
         </Route>
         <Route path="books" element={<Books />} />
+        <Route path="books/:id" element={<SingleBook />} />
       </Routes>
     </>
   );
