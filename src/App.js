@@ -6,6 +6,7 @@ import Books from "./pages/Books";
 import UsersPosts from "./pages/UsersPosts";
 import SingleBook from "./pages/SingleBook";
 import Forms from "./pages/Forms";
+import MultipleInputs from "./pages/MultipleInputs";
 
 /**
  * React Router DOM (RRD) => Is a library that handles routing in react applications.
@@ -42,6 +43,7 @@ function App() {
     <>
       <Routes>
         <Route path="" element={<Forms />} />
+        <Route path="/multiple" element={<MultipleInputs />} />
         {/* The users books is gonna be a nested route in the users route */}
         <Route path="users" element={<Users />}>
           {/* The UsersPosts page is at /users/posts */}
