@@ -5,6 +5,7 @@ import Movies from "./pages/Movies";
 import Books from "./pages/Books";
 import UsersPosts from "./pages/UsersPosts";
 import SingleBook from "./pages/SingleBook";
+import Forms from "./pages/Forms";
 
 /**
  * React Router DOM (RRD) => Is a library that handles routing in react applications.
@@ -40,6 +41,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="" element={<Forms />} />
         {/* The users books is gonna be a nested route in the users route */}
         <Route path="users" element={<Users />}>
           {/* The UsersPosts page is at /users/posts */}
